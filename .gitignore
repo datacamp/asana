@@ -35,3 +35,6 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 .Rproj.user
+
+# Pesky .DS_Store from my OSX desktop
+.DS_Store

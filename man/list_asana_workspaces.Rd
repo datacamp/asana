@@ -4,11 +4,23 @@
 \alias{list_asana_workspaces}
 \title{List Available Workspaces in the Asana}
 \usage{
-list_asana_workspaces(access_token)
+list_asana_workspaces(access_token = Sys.getenv("ASANA_ACCESS_TOKEN"))
+}
+\arguments{
+\item{access_token}{An Asana access token}
 }
 \value{
-A list containing a dataframe of all available workspaces to the user
+A list containing a dataframe of all available workspaces to the Asana user.
 }
 \description{
 List Available Workspaces in the Asana
+}
+\examples{
+\donttest{
+## Marked as don't test because an access token is needed
+list_asana_workspaces()
+}
+}
+\references{
+\url{https://asana.com/developers/api-reference/workspaces#get}
 }
