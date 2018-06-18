@@ -1,12 +1,22 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-asana
-=====
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "##",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# asana
 
 An R package for accessing the Asana API.
 
-Installation
-------------
+## Installation
 
 One day, you will be able to install the released version of `asana` from [CRAN](https://CRAN.R-project.org) with:
 
@@ -14,7 +24,7 @@ One day, you will be able to install the released version of `asana` from [CRAN]
 install.packages("asana")
 ```
 
-For now, install the development version from [GitHub](https://github.com/) with:
+For now, install the  development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
