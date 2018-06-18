@@ -10,6 +10,7 @@ BugReports: https://github.com/datacamp/asana/issues
 Depends:
     R (>= 3.0.0)
 Imports:
+    assertive.types,
     httr,
     purrr
 Suggests:
