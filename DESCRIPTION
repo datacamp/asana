@@ -1,0 +1,21 @@
+Package: asana
+Type: Package
+Title: Access the Asana API
+Version: 0.0-1
+Author: Chris Cardillo [aut, cre], Sumedh Panchadhar [aut], Richard Cotton [aut]
+Maintainer: Richard Cotton <richierocks@gmail.com>
+Description: Manage your Asana projects via R.
+URL: https://github.com/datacamp/asana
+BugReports: https://github.com/datacamp/asana/issues
+Depends:
+    R (>= 3.0.0)
+Imports:
+    httr,
+    purrr
+Suggests:
+    testthat
+License: GPL (>= 3)
+LazyLoad: yes
+LazyData: yes
+VignetteBuilder: knitr
+Roxygen: list(wrap = FALSE)
