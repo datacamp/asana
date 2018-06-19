@@ -2,6 +2,7 @@
 
 export(store_access_token)
 importFrom(assertive.types,is_a_string)
+export(list_asana_workspaces)
 importFrom(httr,GET)
 importFrom(httr,add_headers)
 importFrom(httr,content)
