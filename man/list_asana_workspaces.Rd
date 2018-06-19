@@ -7,7 +7,7 @@
 list_asana_workspaces(access_token = Sys.getenv("ASANA_ACCESS_TOKEN"))
 }
 \arguments{
-\item{access_token}{An Asana access token}
+\item{access_token}{An Asana access token.}
 }
 \value{
 A list containing a dataframe of all available workspaces to the Asana user.

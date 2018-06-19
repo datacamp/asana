@@ -1,6 +1,6 @@
 #' List Available Workspaces in the Asana
 #'
-#' @param access_token An Asana access token
+#' @param access_token An Asana access token.
 #' @return A list containing a dataframe of all available workspaces to the Asana user.
 #' @references \url{https://asana.com/developers/api-reference/workspaces#get}
 #' @examples
