@@ -12,6 +12,10 @@
 
 list_asana_workspaces <- function(access_token = Sys.getenv("ASANA_ACCESS_TOKEN")){
 
-  call_asana_api("workspaces", access_token = access_token)
+  results <- call_asana_api("workspaces", access_token = access_token)
+
+  results$data <- fix_ids(results$data)
+
+  results
 
 }
