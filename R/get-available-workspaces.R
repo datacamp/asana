@@ -6,11 +6,11 @@
 #' @examples
 #' \donttest{
 #' ## Marked as don't test because an access token is needed
-#' get_asana_workspaces()
+#' get_all_workspaces()
 #' }
 #' @export
 
-get_asana_workspaces <- function(access_token = Sys.getenv("ASANA_ACCESS_TOKEN")){
+get_all_workspaces <- function(access_token = Sys.getenv("ASANA_ACCESS_TOKEN")){
 
   results <- call_asana_api("workspaces", access_token = access_token)
 
