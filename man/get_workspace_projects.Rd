@@ -4,11 +4,13 @@
 \alias{get_workspace_projects}
 \title{List a specific workspace's projects in Asana}
 \usage{
-get_workspace_projects(workspace_id,
+get_workspace_projects(workspace_id, archived = FALSE,
   access_token = Sys.getenv("ASANA_ACCESS_TOKEN"))
 }
 \arguments{
 \item{workspace_id}{An Asana workspace ID}
+
+\item{archived}{A logical TRUE or FALSE to pull archived or live projects. Defaults to false.}
 
 \item{access_token}{An Asana access token.}
 }
