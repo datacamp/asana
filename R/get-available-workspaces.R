@@ -13,9 +13,6 @@
 get_all_workspaces <- function(access_token = Sys.getenv("ASANA_ACCESS_TOKEN")){
 
   results <- call_asana_api("workspaces", access_token = access_token)
-
-  results$data <- fix_ids(results$data)
-
-  results
+  fix_ids(results$data)
 
 }

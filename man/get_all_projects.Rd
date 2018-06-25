@@ -4,11 +4,11 @@
 \alias{get_all_projects}
 \title{List all available projects in Asana}
 \usage{
-get_all_projects(archived = FALSE,
+get_all_projects(archived = NA,
   access_token = Sys.getenv("ASANA_ACCESS_TOKEN"))
 }
 \arguments{
-\item{archived}{A logical TRUE or FALSE to pull archived or live projects. Defaults to false.}
+\item{archived}{TRUE, FALSE, or NA for archived, live, or all projects, respectively. Defaults to NA.}
 
 \item{access_token}{An Asana access token.}
 }
