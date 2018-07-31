@@ -23,3 +23,10 @@ The user to add must exist in the same organization as the team in order to be a
 The user to add can be referenced by their globally unique user ID or their email address.
 Returns the full user record for the added user.
 }
+\seealso{
+Other teams: \code{\link{asn_teams_find_by_id}},
+  \code{\link{asn_teams_find_by_organization}},
+  \code{\link{asn_teams_find_by_user}},
+  \code{\link{asn_teams_remove_user}},
+  \code{\link{asn_teams_users}}, \code{\link{asn_teams}}
+}

@@ -15,3 +15,7 @@ asn_project_memberships_get_many(project, ..., options = list())
 \description{
 Returns the compact project membership records for the project.
 }
+\seealso{
+Other project_memberships: \code{\link{asn_project_memberships_get_single}},
+  \code{\link{asn_project_memberships}}
+}

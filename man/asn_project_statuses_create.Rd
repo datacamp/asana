@@ -16,3 +16,9 @@ color : {String} The color to associate with the status update. Must be one of `
 \description{
 Returns the full record of the newly created project status update.
 }
+\seealso{
+Other project_statuses: \code{\link{asn_project_statuses_delete}},
+  \code{\link{asn_project_statuses_find_by_id}},
+  \code{\link{asn_project_statuses_find_by_project}},
+  \code{\link{asn_project_statuses}}
+}

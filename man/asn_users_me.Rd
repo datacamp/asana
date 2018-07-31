@@ -12,3 +12,9 @@ asn_users_me(..., options = list())
 \description{
 Returns the full user record for the currently authenticated user.
 }
+\seealso{
+Other users: \code{\link{asn_users_find_all}},
+  \code{\link{asn_users_find_by_id}},
+  \code{\link{asn_users_find_by_workspace}},
+  \code{\link{asn_users}}
+}

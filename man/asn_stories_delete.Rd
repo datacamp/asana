@@ -12,3 +12,10 @@ asn_stories_delete(story, ..., options = list())
 \description{
 Deletes a story. A user can only delete stories they have created. Returns an empty data record.
 }
+\seealso{
+Other stories: \code{\link{asn_stories_create_on_task}},
+  \code{\link{asn_stories_find_by_id}},
+  \code{\link{asn_stories_find_by_task}},
+  \code{\link{asn_stories_update}},
+  \code{\link{asn_stories}}
+}

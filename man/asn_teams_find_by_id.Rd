@@ -14,3 +14,10 @@ asn_teams_find_by_id(team, ..., options = list())
 \description{
 Returns the full record for a single team.
 }
+\seealso{
+Other teams: \code{\link{asn_teams_add_user}},
+  \code{\link{asn_teams_find_by_organization}},
+  \code{\link{asn_teams_find_by_user}},
+  \code{\link{asn_teams_remove_user}},
+  \code{\link{asn_teams_users}}, \code{\link{asn_teams}}
+}

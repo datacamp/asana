@@ -18,3 +18,12 @@ this parameter.}
 Returns the compact tag records for some filtered set of tags.
 Use one or more of the parameters provided to filter the tags returned.
 }
+\seealso{
+Other tags: \code{\link{asn_tags_create_in_workspace}},
+  \code{\link{asn_tags_create}},
+  \code{\link{asn_tags_delete}},
+  \code{\link{asn_tags_find_by_id}},
+  \code{\link{asn_tags_find_by_workspace}},
+  \code{\link{asn_tags_get_tasks_with_tag}},
+  \code{\link{asn_tags_update}}, \code{\link{asn_tags}}
+}

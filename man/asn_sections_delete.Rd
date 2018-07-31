@@ -18,3 +18,11 @@ The last remaining section in a board view cannot be deleted.
 
 Returns an empty data block.
 }
+\seealso{
+Other sections: \code{\link{asn_sections_create_in_project}},
+  \code{\link{asn_sections_find_by_id}},
+  \code{\link{asn_sections_find_by_project}},
+  \code{\link{asn_sections_insert_in_project}},
+  \code{\link{asn_sections_update}},
+  \code{\link{asn_sections}}
+}

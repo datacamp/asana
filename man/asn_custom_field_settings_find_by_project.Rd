@@ -14,3 +14,6 @@ asn_custom_field_settings_find_by_project(project, ..., options = list())
 \description{
 Returns a list of all of the custom fields settings on a project, in compact form. Note that, as in all queries to collections which return compact representation, `opt_fields` and `opt_expand` can be used to include more data than is returned in the compact representation. See the getting started guide on [input/output options](/developers/documentation/getting-started/input-output-options) for more information.
 }
+\seealso{
+Other custom_field_settings: \code{\link{asn_custom_field_settings}}
+}

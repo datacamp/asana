@@ -14,3 +14,10 @@ asn_stories_find_by_task(task, ..., options = list())
 \description{
 Returns the compact records for all stories on the task.
 }
+\seealso{
+Other stories: \code{\link{asn_stories_create_on_task}},
+  \code{\link{asn_stories_delete}},
+  \code{\link{asn_stories_find_by_id}},
+  \code{\link{asn_stories_update}},
+  \code{\link{asn_stories}}
+}

@@ -15,3 +15,11 @@ name : {String} The text to be displayed as the section name. This cannot be an 
 \description{
 Returns the full record of the newly created section.
 }
+\seealso{
+Other sections: \code{\link{asn_sections_delete}},
+  \code{\link{asn_sections_find_by_id}},
+  \code{\link{asn_sections_find_by_project}},
+  \code{\link{asn_sections_insert_in_project}},
+  \code{\link{asn_sections_update}},
+  \code{\link{asn_sections}}
+}

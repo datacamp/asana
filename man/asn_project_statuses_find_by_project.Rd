@@ -14,3 +14,9 @@ asn_project_statuses_find_by_project(project, ..., options = list())
 \description{
 Returns the compact project status update records for all updates on the project.
 }
+\seealso{
+Other project_statuses: \code{\link{asn_project_statuses_create}},
+  \code{\link{asn_project_statuses_delete}},
+  \code{\link{asn_project_statuses_find_by_id}},
+  \code{\link{asn_project_statuses}}
+}

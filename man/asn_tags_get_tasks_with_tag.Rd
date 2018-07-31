@@ -16,3 +16,12 @@ asn_tags_get_tasks_with_tag(tag, ..., options = list())
 Returns the compact task records for all tasks with the given tag.
 Tasks can have more than one tag at a time.
 }
+\seealso{
+Other tags: \code{\link{asn_tags_create_in_workspace}},
+  \code{\link{asn_tags_create}},
+  \code{\link{asn_tags_delete}},
+  \code{\link{asn_tags_find_all}},
+  \code{\link{asn_tags_find_by_id}},
+  \code{\link{asn_tags_find_by_workspace}},
+  \code{\link{asn_tags_update}}, \code{\link{asn_tags}}
+}

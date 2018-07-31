@@ -14,3 +14,11 @@ asn_teams_users(team, ..., options = list())
 \description{
 Returns the compact records for all users that are members of the team.
 }
+\seealso{
+Other teams: \code{\link{asn_teams_add_user}},
+  \code{\link{asn_teams_find_by_id}},
+  \code{\link{asn_teams_find_by_organization}},
+  \code{\link{asn_teams_find_by_user}},
+  \code{\link{asn_teams_remove_user}},
+  \code{\link{asn_teams}}
+}

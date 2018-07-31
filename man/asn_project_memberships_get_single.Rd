@@ -14,3 +14,7 @@ asn_project_memberships_get_single(project, ..., options = list())
 \description{
 Returns the project membership record.
 }
+\seealso{
+Other project_memberships: \code{\link{asn_project_memberships_get_many}},
+  \code{\link{asn_project_memberships}}
+}

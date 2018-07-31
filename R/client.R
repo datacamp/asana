@@ -98,7 +98,15 @@ print.asana_api <- function(x, ...) {
   )
 }
 
-asn_process_response <- function(txt){
+#' @export
+#' @importFrom dplyr as_data_frame
+as_data_frame.asana_api <- function(x, ...){
+  d <- x$content$data
+  d$id <- fix_ids(d$id)
+  dplyr::as_data_frame(d)
+}
+
+asn_process_response <- function(data){
   results <- jsonlite::fromJSON(txt)
   if ('data' %in% names(results)){
     results$data$id = asana:::fix_ids(results$data$id)

@@ -14,3 +14,10 @@ asn_stories_find_by_id(story, ..., options = list())
 \description{
 Returns the full record for a single story.
 }
+\seealso{
+Other stories: \code{\link{asn_stories_create_on_task}},
+  \code{\link{asn_stories_delete}},
+  \code{\link{asn_stories_find_by_task}},
+  \code{\link{asn_stories_update}},
+  \code{\link{asn_stories}}
+}

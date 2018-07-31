@@ -19,3 +19,10 @@ to indicate the current user making the request.}
 The user to remove can be referenced by their globally unique user ID or their email address.
 Removes the user from the specified team. Returns an empty data record.
 }
+\seealso{
+Other teams: \code{\link{asn_teams_add_user}},
+  \code{\link{asn_teams_find_by_id}},
+  \code{\link{asn_teams_find_by_organization}},
+  \code{\link{asn_teams_find_by_user}},
+  \code{\link{asn_teams_users}}, \code{\link{asn_teams}}
+}

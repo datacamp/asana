@@ -14,3 +14,7 @@ asn_attachments_find_by_task(task, ..., options = list())
 \description{
 Returns the compact records for all attachments on the task.
 }
+\seealso{
+Other attachments: \code{\link{asn_attachments_find_by_id}},
+  \code{\link{asn_attachments}}
+}

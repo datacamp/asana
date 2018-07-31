@@ -21,3 +21,13 @@ An enum custom field's `enum_options` cannot be updated with this endpoint. Inst
 
 Returns the complete updated custom field record.
 }
+\seealso{
+Other custom_fields: \code{\link{asn_custom_fields_add_enum_option}},
+  \code{\link{asn_custom_fields_create}},
+  \code{\link{asn_custom_fields_delete}},
+  \code{\link{asn_custom_fields_find_by_id}},
+  \code{\link{asn_custom_fields_find_by_workspace}},
+  \code{\link{asn_custom_fields_reorder_enum_option}},
+  \code{\link{asn_custom_fields_update_enum_option}},
+  \code{\link{asn_custom_fields}}
+}

@@ -19,3 +19,11 @@ Currently the only field that can be modified for a workspace is its `name`.
 \details{
 Returns the complete, updated workspace record.
 }
+\seealso{
+Other workspaces: \code{\link{asn_workspaces_add_user}},
+  \code{\link{asn_workspaces_find_all}},
+  \code{\link{asn_workspaces_find_by_id}},
+  \code{\link{asn_workspaces_remove_user}},
+  \code{\link{asn_workspaces_typeahead}},
+  \code{\link{asn_workspaces}}
+}

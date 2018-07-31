@@ -21,3 +21,10 @@ Updates the story and returns the full record for the updated story.
 Only comment stories can have their text updated, and only comment stories and
 attachment stories can be pinned. Only one of `text` and `html_text` can be specified.
 }
+\seealso{
+Other stories: \code{\link{asn_stories_create_on_task}},
+  \code{\link{asn_stories_delete}},
+  \code{\link{asn_stories_find_by_id}},
+  \code{\link{asn_stories_find_by_task}},
+  \code{\link{asn_stories}}
+}

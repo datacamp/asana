@@ -24,3 +24,21 @@ supply a `team` to share the project with.
 
 Returns the full record of the newly created project.
 }
+\seealso{
+Other projects: \code{\link{asn_projects_add_custom_field_setting}},
+  \code{\link{asn_projects_add_followers}},
+  \code{\link{asn_projects_add_members}},
+  \code{\link{asn_projects_create_in_team}},
+  \code{\link{asn_projects_create_in_workspace}},
+  \code{\link{asn_projects_delete}},
+  \code{\link{asn_projects_find_all}},
+  \code{\link{asn_projects_find_by_id}},
+  \code{\link{asn_projects_find_by_team}},
+  \code{\link{asn_projects_find_by_workspace}},
+  \code{\link{asn_projects_remove_custom_field_setting}},
+  \code{\link{asn_projects_remove_followers}},
+  \code{\link{asn_projects_remove_members}},
+  \code{\link{asn_projects_tasks}},
+  \code{\link{asn_projects_update}},
+  \code{\link{asn_projects}}
+}

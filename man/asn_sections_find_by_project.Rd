@@ -14,3 +14,11 @@ asn_sections_find_by_project(project, ..., options = list())
 \description{
 Returns the compact records for all sections in the specified project.
 }
+\seealso{
+Other sections: \code{\link{asn_sections_create_in_project}},
+  \code{\link{asn_sections_delete}},
+  \code{\link{asn_sections_find_by_id}},
+  \code{\link{asn_sections_insert_in_project}},
+  \code{\link{asn_sections_update}},
+  \code{\link{asn_sections}}
+}

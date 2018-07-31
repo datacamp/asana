@@ -14,3 +14,7 @@ asn_attachments_find_by_id(attachment, ..., options = list())
 \description{
 Returns the full record for a single attachment.
 }
+\seealso{
+Other attachments: \code{\link{asn_attachments_find_by_task}},
+  \code{\link{asn_attachments}}
+}

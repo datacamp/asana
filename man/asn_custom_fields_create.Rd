@@ -21,3 +21,13 @@ A custom field's `name` must be unique within a workspace and not conflict with 
 \details{
 Returns the full record of the newly created custom field.
 }
+\seealso{
+Other custom_fields: \code{\link{asn_custom_fields_add_enum_option}},
+  \code{\link{asn_custom_fields_delete}},
+  \code{\link{asn_custom_fields_find_by_id}},
+  \code{\link{asn_custom_fields_find_by_workspace}},
+  \code{\link{asn_custom_fields_reorder_enum_option}},
+  \code{\link{asn_custom_fields_update_enum_option}},
+  \code{\link{asn_custom_fields_update}},
+  \code{\link{asn_custom_fields}}
+}

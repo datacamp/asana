@@ -23,3 +23,11 @@ At this point in time, moving sections is not supported in list views, only boar
 
 Returns an empty data block.
 }
+\seealso{
+Other sections: \code{\link{asn_sections_create_in_project}},
+  \code{\link{asn_sections_delete}},
+  \code{\link{asn_sections_find_by_id}},
+  \code{\link{asn_sections_find_by_project}},
+  \code{\link{asn_sections_update}},
+  \code{\link{asn_sections}}
+}

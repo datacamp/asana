@@ -19,3 +19,10 @@ asn_teams_find_by_user(user, ..., options = list())
 \description{
 Returns the compact records for all teams to which user is assigned.
 }
+\seealso{
+Other teams: \code{\link{asn_teams_add_user}},
+  \code{\link{asn_teams_find_by_id}},
+  \code{\link{asn_teams_find_by_organization}},
+  \code{\link{asn_teams_remove_user}},
+  \code{\link{asn_teams_users}}, \code{\link{asn_teams}}
+}

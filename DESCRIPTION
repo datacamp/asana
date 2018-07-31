@@ -12,7 +12,8 @@ Depends:
 Imports:
     assertive.types,
     httr,
-    purrr
+    purrr,
+    dplyr
 Suggests:
     testthat
 License: GPL (>= 3)

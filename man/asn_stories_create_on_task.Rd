@@ -17,3 +17,10 @@ text : {String} The plain text of the comment to add.}
 \description{
 Returns the full record for the new story added to the task.
 }
+\seealso{
+Other stories: \code{\link{asn_stories_delete}},
+  \code{\link{asn_stories_find_by_id}},
+  \code{\link{asn_stories_find_by_task}},
+  \code{\link{asn_stories_update}},
+  \code{\link{asn_stories}}
+}

@@ -18,3 +18,8 @@ asn_users_find_by_id(user, ..., options = list())
 \description{
 Returns the full user record for the single user with the provided ID.
 }
+\seealso{
+Other users: \code{\link{asn_users_find_all}},
+  \code{\link{asn_users_find_by_workspace}},
+  \code{\link{asn_users_me}}, \code{\link{asn_users}}
+}

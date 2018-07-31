@@ -16,3 +16,10 @@ asn_teams_find_by_organization(organization, ..., options = list())
 Returns the compact records for all teams in the organization visible to
 the authorized user.
 }
+\seealso{
+Other teams: \code{\link{asn_teams_add_user}},
+  \code{\link{asn_teams_find_by_id}},
+  \code{\link{asn_teams_find_by_user}},
+  \code{\link{asn_teams_remove_user}},
+  \code{\link{asn_teams_users}}, \code{\link{asn_teams}}
+}

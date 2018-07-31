@@ -14,3 +14,32 @@ asn_tasks_search(workspace, ..., options = list())
 \description{
 The search endpoint allows you to build complex queries to find and fetch exactly the data you need from Asana. For a more comprehensive description of all the query parameters and limitations of this endpoint, see our [long-form documentation](/developers/documentation/getting-started/search-api) for this feature.
 }
+\seealso{
+Other tasks: \code{\link{asn_tasks_add_comment}},
+  \code{\link{asn_tasks_add_dependencies}},
+  \code{\link{asn_tasks_add_dependents}},
+  \code{\link{asn_tasks_add_followers}},
+  \code{\link{asn_tasks_add_project}},
+  \code{\link{asn_tasks_add_subtask}},
+  \code{\link{asn_tasks_add_tag}},
+  \code{\link{asn_tasks_create_in_workspace}},
+  \code{\link{asn_tasks_create}},
+  \code{\link{asn_tasks_delete}},
+  \code{\link{asn_tasks_dependencies}},
+  \code{\link{asn_tasks_dependents}},
+  \code{\link{asn_tasks_find_all}},
+  \code{\link{asn_tasks_find_by_id}},
+  \code{\link{asn_tasks_find_by_project}},
+  \code{\link{asn_tasks_find_by_section}},
+  \code{\link{asn_tasks_find_by_tag}},
+  \code{\link{asn_tasks_projects}},
+  \code{\link{asn_tasks_remove_dependencies}},
+  \code{\link{asn_tasks_remove_dependents}},
+  \code{\link{asn_tasks_remove_followers}},
+  \code{\link{asn_tasks_remove_project}},
+  \code{\link{asn_tasks_remove_tag}},
+  \code{\link{asn_tasks_stories}},
+  \code{\link{asn_tasks_subtasks}},
+  \code{\link{asn_tasks_tags}},
+  \code{\link{asn_tasks_update}}, \code{\link{asn_tasks}}
+}
