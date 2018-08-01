@@ -74,7 +74,8 @@ print.asana_api <- function(x, ...) {
   }
 
   parsed <- jsonlite::fromJSON(
-    content(response, as = "text")
+    content(response, as = "text"),
+    flatten = getOption('asana.response.flatten', TRUE)
   )
 
   if (http_error(response)) {
@@ -102,8 +103,15 @@ print.asana_api <- function(x, ...) {
 #' @importFrom dplyr as_data_frame
 as_data_frame.asana_api <- function(x, ...){
   d <- x$content$data
-  d$id <- fix_ids(d$id)
-  dplyr::as_data_frame(d)
+  d1 <- d %>%
+    as_data_frame()
+  class(d1) <- c('tbl_asana', class(d1))
+  return(d1)
+}
+
+#' @export
+print.tbl_asana <- function(x, ...){
+  print(fix_all_ids(x))
 }
 
 asn_process_response <- function(data){
@@ -114,4 +122,15 @@ asn_process_response <- function(data){
   } else {
     return(results)
   }
+}
+
+fix_all_ids <- function(d){
+  d %>%
+    mutate_at(vars(contains("id")), ~ {
+      if (is.numeric(.x) && nchar(.x) >= 10){
+        fix_ids(.x)
+      } else {
+        .x
+      }
+    })
 }
