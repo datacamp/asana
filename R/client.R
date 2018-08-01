@@ -89,7 +89,7 @@ print.asana_api <- function(x, ...) {
     )
   }
 
-  structure(
+  out <- structure(
     list(
       content = parsed,
       path = endpoint,
@@ -97,6 +97,7 @@ print.asana_api <- function(x, ...) {
     ),
     class = "asana_api"
   )
+  possibly(as_data_frame, identity)(out)
 }
 
 #' @export
