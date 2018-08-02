@@ -13,7 +13,8 @@ asn_get <- function(endpoint, ..., options = list(),
     query = append(options, list(...))
   )
   stop_for_status(response)
-  .process_response(response, endpoint)
+  out <- .process_response(response, endpoint)
+  possibly(as_data_frame, out)(out)
 }
 
 
@@ -73,9 +74,10 @@ print.asana_api <- function(x, ...) {
     stop("API did not return json", call. = FALSE)
   }
 
+  # TODO: Use jsonlite::flatten in post-processing
   parsed <- jsonlite::fromJSON(
-    content(response, as = "text"),
-    flatten = getOption('asana.response.flatten', TRUE)
+    content(response, as = "text")
+    # flatten = getOption('asana.response.flatten', TRUE)
   )
 
   if (http_error(response)) {
@@ -97,22 +99,17 @@ print.asana_api <- function(x, ...) {
     ),
     class = "asana_api"
   )
-  possibly(as_data_frame, identity)(out)
+  out
 }
 
 #' @export
 #' @importFrom dplyr as_data_frame
 as_data_frame.asana_api <- function(x, ...){
   d <- x$content$data
-  d1 <- d %>%
+  d %>%
+    fix_all_ids() %>%
+    jsonlite::flatten() %>%
     as_data_frame()
-  class(d1) <- c('tbl_asana', class(d1))
-  return(d1)
-}
-
-#' @export
-print.tbl_asana <- function(x, ...){
-  print(fix_all_ids(x))
 }
 
 asn_process_response <- function(data){
@@ -125,13 +122,20 @@ asn_process_response <- function(data){
   }
 }
 
-fix_all_ids <- function(d){
-  d %>%
-    mutate_at(vars(contains("id")), ~ {
-      if (is.numeric(.x) && nchar(.x) >= 10){
-        fix_ids(.x)
-      } else {
-        .x
-      }
-    })
+fix_all_ids <- function(d1){
+  for (nm in names(d1)){
+    if (is.data.frame(d1[[nm]])){
+      d1[[nm]]$id <- fix_ids(d1[[nm]])
+    } else if (is.list(d1[[nm]])){
+      d1[[nm]] <- d1[[nm]] %>% map(~ {
+         if ('id' %in% names(.x)){
+           .x %>% mutate(id = fix_ids(id))
+         } else {
+           .x
+         }
+      })
+    }
+  }
+  d1$id <- fix_ids(d1$id)
+  return(d1)
 }
