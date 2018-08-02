@@ -18,9 +18,7 @@ For now, install the development version from [GitHub](https://github.com/) with
 
 ``` r
 # install.packages("remotes")
-remotes::install_github(
-  "datacamp/asana@bb0b23cc9ae0fd41bddaa92148e63cf4804b8760"
-)
+remotes::install_github("datacamp/asana", ref = github_pull(5))
 ```
 
 Get an API token from Asana and make sure to set it in your `.Renviron` file. You can run `usethis::edit_r_environ()` to automatically pull up your `.Renviron` file in RStudio for editing.
