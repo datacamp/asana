@@ -127,15 +127,16 @@ fix_all_ids <- function(d1){
     if (is.data.frame(d1[[nm]])){
       d1[[nm]]$id <- fix_ids(d1[[nm]])
     } else if (is.list(d1[[nm]])){
-      d1[[nm]] <- d1[[nm]] %>% map(~ {
-         if ('id' %in% names(.x)){
-           .x %>% mutate(id = fix_ids(id))
-         } else {
-           .x
-         }
-      })
+      d1[[nm]] <- d1[[nm]] %>% map(~ possibly(fix_ids_in_list, .x)(.x))
     }
   }
   d1$id <- fix_ids(d1$id)
   return(d1)
+}
+
+fix_ids_in_list <- function(.x){
+  if ('id' %in% names(.x)){
+    .x$id <- fix_ids(.x$id)
+  }
+  .x
 }
