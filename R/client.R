@@ -4,6 +4,7 @@
 #' @param ... query parameters
 #' @param .token access token
 #' @import httr
+#' @importFrom purrr possibly
 #' @export
 asn_get <- function(endpoint, ..., options = list(),
     .token = Sys.getenv("ASANA_ACCESS_TOKEN")) {
@@ -14,7 +15,7 @@ asn_get <- function(endpoint, ..., options = list(),
   )
   stop_for_status(response)
   out <- .process_response(response, endpoint)
-  possibly(as_data_frame, out)(out)
+  purrr::possibly(as_data_frame, out)(out)
 }
 
 
@@ -104,18 +105,19 @@ print.asana_api <- function(x, ...) {
 
 #' @export
 #' @importFrom dplyr as_data_frame
+#' @importFrom jsonlite flatten
 as_data_frame.asana_api <- function(x, ...){
   d <- x$content$data
   d %>%
     fix_all_ids() %>%
     jsonlite::flatten() %>%
-    as_data_frame()
+    dplyr::as_data_frame()
 }
 
 asn_process_response <- function(data){
   results <- jsonlite::fromJSON(txt)
   if ('data' %in% names(results)){
-    results$data$id = asana:::fix_ids(results$data$id)
+    results$data$id = fix_ids(results$data$id)
     return(results$data)
   } else {
     return(results)
