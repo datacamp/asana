@@ -4,6 +4,7 @@
 #' @param ... query parameters
 #' @param .token access token
 #' @import httr
+#' @importFrom purrr possibly
 #' @export
 asn_get <- function(endpoint, ..., options = list(),
     .token = Sys.getenv("ASANA_ACCESS_TOKEN")) {
@@ -14,7 +15,7 @@ asn_get <- function(endpoint, ..., options = list(),
   )
   stop_for_status(response)
   out <- .process_response(response, endpoint)
-  possibly(as_data_frame, out)(out)
+  purrr::possibly(as_data_frame, out)(out)
 }
 
 
@@ -104,18 +105,19 @@ print.asana_api <- function(x, ...) {
 
 #' @export
 #' @importFrom dplyr as_data_frame
+#' @importFrom jsonlite flatten
 as_data_frame.asana_api <- function(x, ...){
   d <- x$content$data
   d %>%
     fix_all_ids() %>%
     jsonlite::flatten() %>%
-    as_data_frame()
+    dplyr::as_data_frame()
 }
 
 asn_process_response <- function(data){
   results <- jsonlite::fromJSON(txt)
   if ('data' %in% names(results)){
-    results$data$id = asana:::fix_ids(results$data$id)
+    results$data$id = fix_ids(results$data$id)
     return(results$data)
   } else {
     return(results)
@@ -127,15 +129,16 @@ fix_all_ids <- function(d1){
     if (is.data.frame(d1[[nm]])){
       d1[[nm]]$id <- fix_ids(d1[[nm]])
     } else if (is.list(d1[[nm]])){
-      d1[[nm]] <- d1[[nm]] %>% map(~ {
-         if ('id' %in% names(.x)){
-           .x %>% mutate(id = fix_ids(id))
-         } else {
-           .x
-         }
-      })
+      d1[[nm]] <- d1[[nm]] %>% map(~ possibly(fix_ids_in_list, .x)(.x))
     }
   }
   d1$id <- fix_ids(d1$id)
   return(d1)
+}
+
+fix_ids_in_list <- function(.x){
+  if ('id' %in% names(.x)){
+    .x$id <- fix_ids(.x$id)
+  }
+  .x
 }

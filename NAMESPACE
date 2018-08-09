@@ -2,6 +2,7 @@
 
 S3method(as_data_frame,asana_api)
 S3method(print,asana_api)
+export("%>%")
 export(asn_attachments_find_by_id)
 export(asn_attachments_find_by_task)
 export(asn_custom_field_settings_find_by_project)
@@ -120,3 +121,5 @@ importFrom(httr,add_headers)
 importFrom(httr,content)
 importFrom(httr,stop_for_status)
 importFrom(jsonlite,fromJSON)
+importFrom(magrittr,"%>%")
+importFrom(purrr,possibly)
