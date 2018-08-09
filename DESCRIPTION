@@ -13,7 +13,8 @@ Imports:
     assertive.types,
     httr,
     purrr,
-    dplyr
+    dplyr,
+    magrittr
 Suggests:
     testthat
 License: GPL (>= 3)
