@@ -22,3 +22,4 @@ Other project_statuses: \code{\link{asn_project_statuses_delete}},
   \code{\link{asn_project_statuses_find_by_project}},
   \code{\link{asn_project_statuses}}
 }
+\concept{project_statuses}

@@ -19,3 +19,4 @@ Other users: \code{\link{asn_users_find_all}},
   \code{\link{asn_users_find_by_workspace}},
   \code{\link{asn_users_me}}
 }
+\concept{users}

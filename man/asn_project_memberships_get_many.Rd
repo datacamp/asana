@@ -19,3 +19,4 @@ Returns the compact project membership records for the project.
 Other project_memberships: \code{\link{asn_project_memberships_get_single}},
   \code{\link{asn_project_memberships}}
 }
+\concept{project_memberships}

@@ -17,3 +17,4 @@ Other teams: \code{\link{asn_teams_add_user}},
   \code{\link{asn_teams_remove_user}},
   \code{\link{asn_teams_users}}
 }
+\concept{teams}

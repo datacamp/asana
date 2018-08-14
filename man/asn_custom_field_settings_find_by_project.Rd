@@ -17,3 +17,4 @@ Returns a list of all of the custom fields settings on a project, in compact for
 \seealso{
 Other custom_field_settings: \code{\link{asn_custom_field_settings}}
 }
+\concept{custom_field_settings}

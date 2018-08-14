@@ -28,3 +28,4 @@ Other stories: \code{\link{asn_stories_create_on_task}},
   \code{\link{asn_stories_find_by_task}},
   \code{\link{asn_stories}}
 }
+\concept{stories}

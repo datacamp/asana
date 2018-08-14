@@ -21,3 +21,4 @@ Other stories: \code{\link{asn_stories_create_on_task}},
   \code{\link{asn_stories_update}},
   \code{\link{asn_stories}}
 }
+\concept{stories}

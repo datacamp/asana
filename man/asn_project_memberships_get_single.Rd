@@ -18,3 +18,4 @@ Returns the project membership record.
 Other project_memberships: \code{\link{asn_project_memberships_get_many}},
   \code{\link{asn_project_memberships}}
 }
+\concept{project_memberships}

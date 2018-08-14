@@ -23,3 +23,4 @@ Other sections: \code{\link{asn_sections_delete}},
   \code{\link{asn_sections_update}},
   \code{\link{asn_sections}}
 }
+\concept{sections}

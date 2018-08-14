@@ -50,3 +50,4 @@ Other tasks: \code{\link{asn_tasks_add_comment}},
   \code{\link{asn_tasks_subtasks}},
   \code{\link{asn_tasks_tags}}, \code{\link{asn_tasks}}
 }
+\concept{tasks}

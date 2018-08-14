@@ -24,3 +24,4 @@ An _organization_export_ object represents a request to export the complete data
 Other organization_exports: \code{\link{asn_organization_exports_create}},
   \code{\link{asn_organization_exports_find_by_id}}
 }
+\concept{organization_exports}

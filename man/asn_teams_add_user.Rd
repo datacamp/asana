@@ -30,3 +30,4 @@ Other teams: \code{\link{asn_teams_find_by_id}},
   \code{\link{asn_teams_remove_user}},
   \code{\link{asn_teams_users}}, \code{\link{asn_teams}}
 }
+\concept{teams}

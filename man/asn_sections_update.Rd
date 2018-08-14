@@ -30,3 +30,4 @@ Other sections: \code{\link{asn_sections_create_in_project}},
   \code{\link{asn_sections_insert_in_project}},
   \code{\link{asn_sections}}
 }
+\concept{sections}

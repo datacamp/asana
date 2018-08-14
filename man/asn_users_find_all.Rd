@@ -22,3 +22,4 @@ Other users: \code{\link{asn_users_find_by_id}},
   \code{\link{asn_users_find_by_workspace}},
   \code{\link{asn_users_me}}, \code{\link{asn_users}}
 }
+\concept{users}

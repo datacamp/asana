@@ -24,3 +24,4 @@ Other stories: \code{\link{asn_stories_delete}},
   \code{\link{asn_stories_update}},
   \code{\link{asn_stories}}
 }
+\concept{stories}

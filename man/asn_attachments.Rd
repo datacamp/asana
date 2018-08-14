@@ -14,3 +14,4 @@ An _attachment_ object represents any file attached to a task in Asana,
 Other attachments: \code{\link{asn_attachments_find_by_id}},
   \code{\link{asn_attachments_find_by_task}}
 }
+\concept{attachments}

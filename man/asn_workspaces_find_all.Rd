@@ -20,3 +20,4 @@ Other workspaces: \code{\link{asn_workspaces_add_user}},
   \code{\link{asn_workspaces_update}},
   \code{\link{asn_workspaces}}
 }
+\concept{workspaces}

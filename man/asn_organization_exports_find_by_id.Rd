@@ -19,3 +19,4 @@ Returns details of a previously-requested Organization export.
 Other organization_exports: \code{\link{asn_organization_exports_create}},
   \code{\link{asn_organization_exports}}
 }
+\concept{organization_exports}

@@ -31,3 +31,4 @@ Other custom_fields: \code{\link{asn_custom_fields_add_enum_option}},
   \code{\link{asn_custom_fields_update_enum_option}},
   \code{\link{asn_custom_fields}}
 }
+\concept{custom_fields}

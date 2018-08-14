@@ -28,3 +28,4 @@ Other custom_fields: \code{\link{asn_custom_fields_create}},
   \code{\link{asn_custom_fields_update}},
   \code{\link{asn_custom_fields}}
 }
+\concept{custom_fields}

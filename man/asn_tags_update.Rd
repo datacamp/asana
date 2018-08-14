@@ -30,3 +30,4 @@ Other tags: \code{\link{asn_tags_create_in_workspace}},
   \code{\link{asn_tags_get_tasks_with_tag}},
   \code{\link{asn_tags}}
 }
+\concept{tags}

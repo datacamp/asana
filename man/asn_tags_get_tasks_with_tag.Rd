@@ -25,3 +25,4 @@ Other tags: \code{\link{asn_tags_create_in_workspace}},
   \code{\link{asn_tags_find_by_workspace}},
   \code{\link{asn_tags_update}}, \code{\link{asn_tags}}
 }
+\concept{tags}

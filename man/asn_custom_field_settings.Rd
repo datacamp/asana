@@ -15,3 +15,4 @@ Custom fields are attached to a particular project with the Custom
 
 Other custom_field_settings: \code{\link{asn_custom_field_settings_find_by_project}}
 }
+\concept{custom_field_settings}

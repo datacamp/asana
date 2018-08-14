@@ -4,7 +4,8 @@
 \alias{asn_custom_fields_reorder_enum_option}
 \title{Moves a particular enum option to be either before or after another specified enum option in the custom field.}
 \usage{
-asn_custom_fields_reorder_enum_option(custom_field, ..., options = list())
+asn_custom_fields_reorder_enum_option(custom_field, ...,
+  options = list())
 }
 \arguments{
 \item{custom_field}{{Id} Globally unique identifier for the custom field.#'}
@@ -29,3 +30,4 @@ Other custom_fields: \code{\link{asn_custom_fields_add_enum_option}},
   \code{\link{asn_custom_fields_update}},
   \code{\link{asn_custom_fields}}
 }
+\concept{custom_fields}

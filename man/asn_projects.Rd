@@ -34,3 +34,4 @@ Other projects: \code{\link{asn_projects_add_custom_field_setting}},
   \code{\link{asn_projects_tasks}},
   \code{\link{asn_projects_update}}
 }
+\concept{projects}

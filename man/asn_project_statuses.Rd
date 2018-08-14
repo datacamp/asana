@@ -19,3 +19,4 @@ Other project_statuses: \code{\link{asn_project_statuses_create}},
   \code{\link{asn_project_statuses_find_by_id}},
   \code{\link{asn_project_statuses_find_by_project}}
 }
+\concept{project_statuses}
