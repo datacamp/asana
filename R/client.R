@@ -106,6 +106,7 @@ print.asana_api <- function(x, ...) {
 #' @export
 #' @importFrom dplyr as_data_frame
 #' @importFrom jsonlite flatten
+#' @importFrom purrr map
 as_data_frame.asana_api <- function(x, ...){
   d <- x$content$data
   d %>%
@@ -129,7 +130,7 @@ fix_all_ids <- function(d1){
     if (is.data.frame(d1[[nm]])){
       d1[[nm]]$id <- fix_ids(d1[[nm]])
     } else if (is.list(d1[[nm]])){
-      d1[[nm]] <- d1[[nm]] %>% map(~ possibly(fix_ids_in_list, .x)(.x))
+      d1[[nm]] <- d1[[nm]] %>% purrr::map(~ possibly(fix_ids_in_list, .x)(.x))
     }
   }
   d1$id <- fix_ids(d1$id)
