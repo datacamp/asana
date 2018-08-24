@@ -21,7 +21,15 @@ For now, install the development version from [GitHub](https://github.com/) with
 remotes::install_github("datacamp/asana")
 ```
 
-Get an API token from Asana and make sure to set it in your `.Renviron` file. You can run `usethis::edit_r_environ()` to automatically pull up your `.Renviron` file in RStudio for editing.
+Get an API token from Asana by doing the following steps. More information is under "Personal Access Token" [here](https://asana.com/guide/help/api/api).
+
+- Click your profile photo from the topbar in Asana
+- Select My Profile Settings…
+- Open the Apps tab
+- Click Manage Developer Apps
+- Click + Create New Personal Access Token
+
+Make sure to set it in your `.Renviron` file. You can run `usethis::edit_r_environ()` to automatically pull up your `.Renviron` file in RStudio for editing.
 
 ```
 ASANA_ACCESS_TOKEN=xxxxxx
