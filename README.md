@@ -32,7 +32,9 @@ Get an API token from Asana by doing the following steps. More information is un
 Make sure to set it in your `.Renviron` file. You can run `usethis::edit_r_environ()` to automatically pull up your `.Renviron` file in RStudio for editing.
 
 ```
-ASANA_ACCESS_TOKEN=xxxxxx
+ASANA_ACCESS_TOKEN="xxxxxx"
 ```
+
+where `xxxxx` is the Token generated.
 
 <!-- just checking if i still have write access to the repo -->
