@@ -8,6 +8,7 @@
 #' @export
 asn_get <- function(endpoint, ..., options = list(),
     .token = Sys.getenv("ASANA_ACCESS_TOKEN")) {
+  check_for_token(.token)
   response <- GET(
     url = paste0("https://app.asana.com/api/1.0", endpoint),
     config = add_headers(Authorization = paste("Bearer", .token)),
@@ -29,6 +30,7 @@ asn_get <- function(endpoint, ..., options = list(),
 #' }
 asn_post <- function(endpoint, ..., options = list(),
     .token = Sys.getenv("ASANA_ACCESS_TOKEN")){
+  check_for_token(.token)
   response <- httr::POST(
     url = paste0("https://app.asana.com/api/1.0", endpoint),
     config = add_headers(Authorization = paste("Bearer", .token)),
@@ -48,7 +50,7 @@ asn_post <- function(endpoint, ..., options = list(),
 #' }
 asn_put <- function(endpoint, ..., options = list(),
     .token = Sys.getenv("ASANA_ACCESS_TOKEN")){
-
+  check_for_token(.token)
   response <- httr::PUT(
     url = paste0("https://app.asana.com/api/1.0", endpoint),
     config = httr::add_headers(Authorization = paste("Bearer", .token)),
@@ -142,4 +144,10 @@ fix_ids_in_list <- function(.x){
     .x$id <- fix_ids(.x$id)
   }
   .x
+}
+
+check_for_token <- function(.token){
+  if (.token == ""){
+    stop("You need an API access token from Asana. You can find instructions on how to get one here: https://github.com/datacamp/asana/blob/master/README.md", call. = FALSE)
+  }
 }
