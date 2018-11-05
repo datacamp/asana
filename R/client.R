@@ -51,10 +51,12 @@ asn_post <- function(endpoint, ..., options = list(),
 asn_put <- function(endpoint, ..., options = list(),
     .token = Sys.getenv("ASANA_ACCESS_TOKEN")){
   check_for_token(.token)
+  body = append(list(data = list(...)), options)
   response <- httr::PUT(
     url = paste0("https://app.asana.com/api/1.0", endpoint),
     config = httr::add_headers(Authorization = paste("Bearer", .token)),
-    body = append(list(...), options)
+    body = jsonlite::toJSON(body, auto_unbox = TRUE),
+    httr::content_type_json()
   )
   stop_for_status(response)
   .process_response(response, endpoint)
