@@ -1,7 +1,7 @@
 Package: asana
 Type: Package
 Title: Access the Asana API
-Version: 0.1
+Version: 0.1.1
 Author: Chris Cardillo [aut, cre], Sumedh Panchadhar [aut], Richard Cotton [aut]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Description: Manage your Asana projects via R.
