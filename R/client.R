@@ -16,7 +16,7 @@ asn_get <- function(endpoint, ..., options = list(),
   )
   stop_for_status(response)
   out <- .process_response(response, endpoint)
-  purrr::possibly(as_data_frame, out)(out)
+  purrr::possibly(as_tibble, out)(out)
 }
 
 
@@ -81,7 +81,7 @@ print.asana_api <- function(x, ...) {
 
   # TODO: Use jsonlite::flatten in post-processing
   parsed <- jsonlite::fromJSON(
-    content(response, as = "text")
+    content(response, as = "text"),
     # flatten = getOption('asana.response.flatten', TRUE)
   )
 
@@ -108,15 +108,15 @@ print.asana_api <- function(x, ...) {
 }
 
 #' @export
-#' @importFrom dplyr as_data_frame
+#' @importFrom dplyr as_tibble
 #' @importFrom jsonlite flatten
 #' @importFrom purrr map
-as_data_frame.asana_api <- function(x, ...){
+as_tibble.asana_api <- function(x, ...){
   d <- x$content$data
   d %>%
     fix_all_ids() %>%
     jsonlite::flatten() %>%
-    dplyr::as_data_frame()
+    dplyr::as_tibble()
 }
 
 asn_process_response <- function(data){
