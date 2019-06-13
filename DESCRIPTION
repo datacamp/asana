@@ -1,7 +1,7 @@
 Package: asana
 Type: Package
 Title: Access the Asana API
-Version: 0.1.1
+Version: 0.1.2
 Author: Chris Cardillo [aut, cre], Sumedh Panchadhar [aut], Richard Cotton [aut]
 Maintainer: Richard Cotton <richierocks@gmail.com>
 Description: Manage your Asana projects via R.
@@ -22,4 +22,4 @@ LazyLoad: yes
 LazyData: yes
 VignetteBuilder: knitr
 Roxygen: list(wrap = FALSE)
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1

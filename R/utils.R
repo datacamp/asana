@@ -39,3 +39,25 @@ fix_archived <- function(archived){
   archived
 
 }
+
+#' Get the Global ID
+#'
+#' Gets the global ID for an Asana object.
+#' @param x An Asana object.
+#' @return The global ID, as a character vector of length 1.
+#' @export
+get_gid <- function(x) {
+  UseMethod("get_gid")
+}
+
+#' @rdname get_gid
+#' @method get_gid asana_api
+get_gid.asana_api <- function(x) {
+  x$content$data$gid
+}
+
+#' @rdname get_gid
+#' @method get_gid data.frame
+get_gid.data.frame <- function(x) {
+  x$gid
+}
