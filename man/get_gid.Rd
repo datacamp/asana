@@ -16,7 +16,8 @@ get_gid(x)
 \item{x}{An Asana object.}
 }
 \value{
-The global ID, as a character vector of length 1.
+The global ID, as a character vector. For ojbects of class
+\code{asana_api}, this will always have length 1.
 }
 \description{
 Gets the global ID for an Asana object.

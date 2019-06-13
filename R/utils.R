@@ -44,7 +44,8 @@ fix_archived <- function(archived){
 #'
 #' Gets the global ID for an Asana object.
 #' @param x An Asana object.
-#' @return The global ID, as a character vector of length 1.
+#' @return The global ID, as a character vector. For ojbects of class
+#' \code{asana_api}, this will always have length 1.
 #' @export
 get_gid <- function(x) {
   UseMethod("get_gid")
