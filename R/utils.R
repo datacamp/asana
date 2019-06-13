@@ -53,12 +53,14 @@ get_gid <- function(x) {
 
 #' @rdname get_gid
 #' @method get_gid asana_api
+#' @export
 get_gid.asana_api <- function(x) {
   x$content$data$gid
 }
 
 #' @rdname get_gid
 #' @method get_gid data.frame
+#' @export
 get_gid.data.frame <- function(x) {
   x$gid
 }
