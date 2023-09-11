@@ -14,9 +14,11 @@ Imports:
     httr,
     purrr,
     dplyr,
-    magrittr
+    magrittr,
+    jsonlite
 Suggests:
-    testthat
+    testthat, 
+    knitr
 License: GPL (>= 3)
 LazyLoad: yes
 LazyData: yes
