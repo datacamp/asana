@@ -1,4 +1,6 @@
 #' Dispatch a GET request to Asana
+#' We first attempt the GET request as is
+#' If that fails, a series of paginated requests with a size of 100 are initiated.
 #'
 #' @param endpoint endpoint
 #' @param ... query parameters
@@ -8,15 +10,25 @@
 #' @export
 asn_get <- function(endpoint, ..., options = list(),
     .token = Sys.getenv("ASANA_ACCESS_TOKEN")) {
-  check_for_token(.token)
-  response <- GET(
-    url = paste0("https://app.asana.com/api/1.0", endpoint),
-    config = add_headers(Authorization = paste("Bearer", .token)),
-    query = append(options, list(...))
-  )
-  stop_for_status(response)
-  out <- .process_response(response, endpoint)
-  purrr::possibly(as_tibble, out)(out)
+
+  tryCatch({
+    out <- .do_get_call(endpoint, token = .token, ..., options = options)
+    res <- purrr::possibly(as_tibble, out)(out)
+
+    return(res)
+  },
+  error = function(e){
+    message("Falling back to pagination")
+    out <- .do_get_call(endpoint, token = .token, ..., options = append(options, list(limit = "100")))
+    res <- purrr::possibly(as_tibble, out)(out)
+    while (!is.null(out$content$next_page$path)) {
+      next_endpoint <- out$content$next_page$path
+      out <- .do_get_call(next_endpoint, token = .token, ..., options = append(options, list(limit = "100")))
+      res <- bind_rows(res, purrr::possibly(as_tibble, out)(out))
+    }
+
+    return(res)
+  })
 }
 
 
@@ -72,6 +84,20 @@ print.asana_api <- function(x, ...) {
   str(x$content)
   invisible(x)
 }
+
+# Do GET call to Asana API
+.do_get_call <- function(endpoint, token, ..., options = list()){
+  response <- GET(
+    url = paste0("https://app.asana.com/api/1.0", endpoint),
+    config = add_headers(Authorization = paste("Bearer", token)),
+    query = append(options, list(...))
+  )
+  stop_for_status(response)
+  out <- .process_response(response, endpoint)
+
+  return(out)
+}
+
 
 # Process response from Asana API
 .process_response <- function(response, endpoint){
