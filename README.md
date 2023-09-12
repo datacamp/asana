@@ -38,3 +38,14 @@ ASANA_ACCESS_TOKEN="xxxxxx"
 where `xxxxx` is the Token generated.
 
 <!-- just checking if i still have write access to the repo -->
+
+
+
+To add a new task,  simply:
+``` r
+project_id <- "XXXXXXXXX"
+asn_tasks_create(
+  projects = project_id,
+  name =  "testing R!"
+  )
+```
